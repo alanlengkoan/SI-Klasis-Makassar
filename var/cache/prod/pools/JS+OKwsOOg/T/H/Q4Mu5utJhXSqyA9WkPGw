@@ -1,0 +1,65 @@
+<?php //%255B3159f848a60f6174d18463e020f3a606%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT t0_.id_gereja AS id_gereja_0, t0_.alamat AS alamat_1, t0_.tentang AS tentang_2, t0_.telepon AS telepon_3, t0_.twitter AS twitter_4, t0_.instagram AS instagram_5, t0_.facebook AS facebook_6, t0_.youtube AS youtube_7, t0_.lat AS lat_8, t0_.lon AS lon_9, u1_.nama AS nama_10, u1_.email AS email_11, u1_.foto AS foto_12, u1_.username AS username_13 FROM tb_gereja t0_ LEFT JOIN user u1_ ON (t0_.id_gereja = u1_.id_users) ORDER BY t0_.upd DESC',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'id_gereja_0' => 'id_gereja',
+                    'alamat_1' => 'alamat',
+                    'tentang_2' => 'tentang',
+                    'telepon_3' => 'telepon',
+                    'twitter_4' => 'twitter',
+                    'instagram_5' => 'instagram',
+                    'facebook_6' => 'facebook',
+                    'youtube_7' => 'youtube',
+                    'lat_8' => 'lat',
+                    'lon_9' => 'lon',
+                    'nama_10' => 'nama',
+                    'email_11' => 'email',
+                    'foto_12' => 'foto',
+                    'username_13' => 'username',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'id_gereja_0' => 'integer',
+                    'alamat_1' => 'text',
+                    'tentang_2' => 'text',
+                    'telepon_3' => 'string',
+                    'twitter_4' => 'string',
+                    'instagram_5' => 'string',
+                    'facebook_6' => 'string',
+                    'youtube_7' => 'string',
+                    'lat_8' => 'float',
+                    'lon_9' => 'float',
+                    'nama_10' => 'string',
+                    'email_11' => 'string',
+                    'foto_12' => 'string',
+                    'username_13' => 'string',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

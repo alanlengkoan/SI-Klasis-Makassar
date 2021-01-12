@@ -1,0 +1,152 @@
+<?php //%255BApp%255CEntity%255CTbJadwalRincian%2524CLASSMETADATA%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\TbJadwalRincian',
+            ],
+            'namespace' => [
+                'App\\Entity',
+            ],
+            'rootEntityName' => [
+                'App\\Entity\\TbJadwalRincian',
+            ],
+            'customRepositoryClassName' => [
+                'App\\Repository\\TbJadwalRincianRepository',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'id' => [
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'id' => true,
+                        'columnName' => 'id',
+                    ],
+                    'id_jadwal_rincian' => [
+                        'fieldName' => 'id_jadwal_rincian',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'id_jadwal_rincian',
+                    ],
+                    'id_jadwal' => [
+                        'fieldName' => 'id_jadwal',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'id_jadwal',
+                    ],
+                    'id_gereja' => [
+                        'fieldName' => 'id_gereja',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'id_gereja',
+                    ],
+                    'nama_keluarga' => [
+                        'fieldName' => 'nama_keluarga',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 50,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'nama_keluarga',
+                    ],
+                    'nama_pelayan' => [
+                        'fieldName' => 'nama_pelayan',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 50,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'nama_pelayan',
+                    ],
+                    'alamat' => [
+                        'fieldName' => 'alamat',
+                        'type' => 'text',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'alamat',
+                    ],
+                    'tanggal_ibadah' => [
+                        'fieldName' => 'tanggal_ibadah',
+                        'type' => 'datetime',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'tanggal_ibadah',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'id' => 'id',
+                    'id_jadwal_rincian' => 'id_jadwal_rincian',
+                    'id_jadwal' => 'id_jadwal',
+                    'id_gereja' => 'id_gereja',
+                    'nama_keluarga' => 'nama_keluarga',
+                    'nama_pelayan' => 'nama_pelayan',
+                    'alamat' => 'alamat',
+                    'tanggal_ibadah' => 'tanggal_ibadah',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'id' => 'id',
+                    'id_jadwal_rincian' => 'id_jadwal_rincian',
+                    'id_jadwal' => 'id_jadwal',
+                    'id_gereja' => 'id_gereja',
+                    'nama_keluarga' => 'nama_keluarga',
+                    'nama_pelayan' => 'nama_pelayan',
+                    'alamat' => 'alamat',
+                    'tanggal_ibadah' => 'tanggal_ibadah',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'tb_jadwal_rincian',
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

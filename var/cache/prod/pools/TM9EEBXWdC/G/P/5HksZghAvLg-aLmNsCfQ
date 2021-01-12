@@ -1,0 +1,152 @@
+<?php //%255BApp%255CEntity%255CTbPengurus%2524CLASSMETADATA%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\TbPengurus',
+            ],
+            'namespace' => [
+                'App\\Entity',
+            ],
+            'rootEntityName' => [
+                'App\\Entity\\TbPengurus',
+            ],
+            'customRepositoryClassName' => [
+                'App\\Repository\\TbPengurusRepository',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'id' => [
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'id' => true,
+                        'columnName' => 'id',
+                    ],
+                    'id_pengurus' => [
+                        'fieldName' => 'id_pengurus',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => true,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'id_pengurus',
+                    ],
+                    'id_gereja' => [
+                        'fieldName' => 'id_gereja',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'id_gereja',
+                    ],
+                    'nama' => [
+                        'fieldName' => 'nama',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 50,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'nama',
+                    ],
+                    'jabatan' => [
+                        'fieldName' => 'jabatan',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 25,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'jabatan',
+                    ],
+                    'foto' => [
+                        'fieldName' => 'foto',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 50,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'foto',
+                    ],
+                    'ins' => [
+                        'fieldName' => 'ins',
+                        'type' => 'datetime',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'ins',
+                    ],
+                    'upd' => [
+                        'fieldName' => 'upd',
+                        'type' => 'datetime',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => true,
+                        'precision' => 0,
+                        'columnName' => 'upd',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'id' => 'id',
+                    'id_pengurus' => 'id_pengurus',
+                    'id_gereja' => 'id_gereja',
+                    'nama' => 'nama',
+                    'jabatan' => 'jabatan',
+                    'foto' => 'foto',
+                    'ins' => 'ins',
+                    'upd' => 'upd',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'id' => 'id',
+                    'id_pengurus' => 'id_pengurus',
+                    'id_gereja' => 'id_gereja',
+                    'nama' => 'nama',
+                    'jabatan' => 'jabatan',
+                    'foto' => 'foto',
+                    'ins' => 'ins',
+                    'upd' => 'upd',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'tb_pengurus',
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];
