@@ -13,6 +13,7 @@ class AppExtension extends AbstractExtension
         // untuk membuat helper dalam template twig
         return [
             new TwigFilter('format_rp', [AppRuntime::class, 'separatorHarga']),
+            new TwigFilter('umur', [AppRuntime::class, 'hitungUmur']),
         ];
     }
 }
