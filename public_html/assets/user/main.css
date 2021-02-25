@@ -193,7 +193,7 @@ img {
     height: 6px;
     z-index: 10;
     border-radius: 0;
-    background-color: #c92f2f;
+    background-color: #ffb03b;
     margin-top: -3px;
     -webkit-animation: line 40000ms infinite linear;
     animation: line 40000ms infinite linear; }
@@ -252,7 +252,7 @@ img {
 
 /* :: 3.7.0 ScrollUp */
 #scrollUp {
-  background-color: #c92f2f;
+  background-color: #ffb03b;
   border-radius: 0;
   bottom: 50px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
@@ -278,7 +278,7 @@ img {
   min-width: 150px;
   height: 46px;
   color: #ffffff;
-  background-color: #c92f2f;
+  background-color: #ffb03b;
   border-radius: 3px;
   padding: 0 30px;
   font-size: 14px;
@@ -292,10 +292,10 @@ img {
     background-color: #1f1f2c; }
   .crose-btn.btn-2 {
     background-color: #ffffff;
-    color: #c92f2f; }
+    color: #ffb03b; }
     .crose-btn.btn-2.active, .crose-btn.btn-2:hover, .crose-btn.btn-2:focus {
       color: #ffffff;
-      background-color: #c92f2f; }
+      background-color: #ffb03b; }
 
 /* :: 4.0 Header Area CSS */
 .header-area {
@@ -329,12 +329,12 @@ img {
         .header-area .top-header .top-header-content .open i,
         .header-area .top-header .top-header-content .email-address i,
         .header-area .top-header .top-header-content .phone i {
-          color: #c92f2f;
+          color: #ffb03b;
           margin-right: 5px; }
         .header-area .top-header .top-header-content .open:hover,
         .header-area .top-header .top-header-content .email-address:hover,
         .header-area .top-header .top-header-content .phone:hover {
-          color: #c92f2f; }
+          color: #ffb03b; }
       .header-area .top-header .top-header-content .email-address {
         margin-right: 30px; }
         @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -364,7 +364,7 @@ img {
               font-size: 13px;
               padding: 0 5px; } }
           .header-area .top-header .top-header-content .top-social-info a:hover {
-            color: #c92f2f; }
+            color: #ffb03b; }
   .header-area .crose-main-menu {
     position: relative;
     z-index: 1;
@@ -389,7 +389,7 @@ img {
         font-size: 13px;
         padding: 0 7px; } }
     .header-area .classynav ul li a:hover, .header-area .classynav ul li a:focus {
-      color: #c92f2f; }
+      color: #ffb03b; }
   .header-area .classynav ul li ul li a {
     padding: 0 20px;
     letter-spacing: 0;
@@ -427,7 +427,7 @@ img {
       .header-area #header-search {
         padding: 15px 30px; } }
     .header-area #header-search:hover, .header-area #header-search:focus {
-      color: #c92f2f; }
+      color: #ffb03b; }
   .header-area .search-form-area {
     -webkit-transition: 400ms ease-in-out;
     transition: 400ms ease-in-out;
@@ -550,11 +550,11 @@ img {
       -webkit-transition-duration: 500ms;
       transition-duration: 500ms; }
     .about-us-content .about-text a:hover, .about-us-content .about-text a:focus {
-      color: #c92f2f; }
+      color: #ffb03b; }
       .about-us-content .about-text a:hover i, .about-us-content .about-text a:focus i {
         padding-left: 5px; }
   .about-us-content:hover .about-text h4 {
-    color: #c92f2f; }
+    color: #ffb03b; }
 
 .about-page {
   position: relative;
@@ -676,7 +676,7 @@ img {
   background-attachment: fixed; }
   .call-to-action-area .call-to-action-content h6 {
     font-weight: 600;
-    color: #c92f2f;
+    color: #ffb03b;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 18px;
@@ -750,7 +750,7 @@ img {
         display: inline-block;
         margin-right: 20px; }
         .single-latest-sermons .sermons-content .sermons-cata a:hover {
-          color: #c92f2f; }
+          color: #ffb03b; }
     .single-latest-sermons .sermons-content h4 {
       font-size: 24px;
       font-weight: 600;
@@ -766,13 +766,13 @@ img {
           margin-bottom: 0; }
         .single-latest-sermons .sermons-content .sermons-meta-data p i {
           width: 15px;
-          color: #c92f2f; }
+          color: #ffb03b; }
         .single-latest-sermons .sermons-content .sermons-meta-data p span {
           font-style: italic;
           color: #636363; }
   .single-latest-sermons:hover .sermons-thumbnail .sermons-date {
     bottom: 20px;
-    background-color: #c92f2f; }
+    background-color: #ffb03b; }
     .single-latest-sermons:hover .sermons-thumbnail .sermons-date h6 {
       color: #ffffff; }
       .single-latest-sermons:hover .sermons-thumbnail .sermons-date h6 span {
@@ -783,7 +783,7 @@ img {
   position: relative;
   z-index: 1;
   padding: 40px 0;
-  background-color: #c92f2f; }
+  background-color: #ffb03b; }
   .subscribe-area .subscribe-text h3 {
     font-weight: 600;
     font-size: 30px;
@@ -881,7 +881,7 @@ img {
   top: 40px;
   width: 36px;
   height: 36px;
-  background-color: #c92f2f;
+  background-color: #ffb03b;
   line-height: 36px; }
 
 .mfp-bottom-bar {
@@ -907,7 +907,7 @@ img {
     line-height: normal;
     color: #ffffff;
     padding-right: 0;
-    background-color: #c92f2f;
+    background-color: #ffb03b;
     padding: 8px 20px;
     border-radius: 30px;
     font-size: 12px;
@@ -916,7 +916,7 @@ img {
     color: #ffffff;
     position: relative;
     line-height: normal;
-    background-color: #c92f2f;
+    background-color: #ffb03b;
     padding: 8px 20px;
     border-radius: 30px;
     font-size: 12px;
@@ -1056,7 +1056,7 @@ img {
           -webkit-transition-duration: 500ms;
           transition-duration: 500ms; }
         .single-upcoming-events-area .upcoming-events-content .events-text a:hover, .single-upcoming-events-area .upcoming-events-content .events-text a:focus {
-          color: #c92f2f; }
+          color: #ffb03b; }
           .single-upcoming-events-area .upcoming-events-content .events-text a:hover i, .single-upcoming-events-area .upcoming-events-content .events-text a:focus i {
             padding-left: 5px; }
       .single-upcoming-events-area .upcoming-events-content .events-text .events-meta {
@@ -1071,10 +1071,10 @@ img {
           margin-right: 15px;
           font-weight: 400; }
           .single-upcoming-events-area .upcoming-events-content .events-text .events-meta a i {
-            color: #c92f2f;
+            color: #ffb03b;
             padding-right: 5px; }
           .single-upcoming-events-area .upcoming-events-content .events-text .events-meta a:hover, .single-upcoming-events-area .upcoming-events-content .events-text .events-meta a:focus {
-            color: #c92f2f; }
+            color: #ffb03b; }
             .single-upcoming-events-area .upcoming-events-content .events-text .events-meta a:hover i, .single-upcoming-events-area .upcoming-events-content .events-text .events-meta a:focus i {
               padding-left: 0; }
     .single-upcoming-events-area .upcoming-events-content .find-out-more-btn {
@@ -1167,7 +1167,7 @@ img {
       font-size: 14px;
       text-align: center; }
       .sermons-content-area .sermons-text .sermons-meta-data p i {
-        color: #c92f2f; }
+        color: #ffb03b; }
     .sermons-content-area .sermons-text .sermons-cata {
       position: relative;
       z-index: 1;
@@ -1184,8 +1184,8 @@ img {
         text-align: center; }
         .sermons-content-area .sermons-text .sermons-cata a:hover {
           color: #ffffff;
-          background-color: #c92f2f;
-          border-color: #c92f2f; }
+          background-color: #ffb03b;
+          border-color: #ffb03b; }
     .sermons-content-area .sermons-text .read-more-share .read-more-btn a {
       font-weight: 700;
       color: #959595; }
@@ -1193,7 +1193,7 @@ img {
         -webkit-transition-duration: 500ms;
         transition-duration: 500ms; }
       .sermons-content-area .sermons-text .read-more-share .read-more-btn a:hover, .sermons-content-area .sermons-text .read-more-share .read-more-btn a:focus {
-        color: #c92f2f; }
+        color: #ffb03b; }
         .sermons-content-area .sermons-text .read-more-share .read-more-btn a:hover i, .sermons-content-area .sermons-text .read-more-share .read-more-btn a:focus i {
           padding-left: 5px; }
     @media only screen and (max-width: 767px) {
@@ -1207,7 +1207,7 @@ img {
       .sermons-content-area .sermons-text .read-more-share .share span:hover, .sermons-content-area .sermons-text .read-more-share .share span:focus,
       .sermons-content-area .sermons-text .read-more-share .share a:hover,
       .sermons-content-area .sermons-text .read-more-share .share a:focus {
-        color: #c92f2f; }
+        color: #ffb03b; }
       @media only screen and (max-width: 767px) {
         .sermons-content-area .sermons-text .read-more-share .share span,
         .sermons-content-area .sermons-text .read-more-share .share a {
@@ -1232,8 +1232,8 @@ img {
       text-align: center; }
       .catagory-share-meta .sermons-cata a:hover {
         color: #ffffff;
-        background-color: #c92f2f;
-        border-color: #c92f2f; }
+        background-color: #ffb03b;
+        border-color: #ffb03b; }
     @media only screen and (max-width: 767px) {
       .catagory-share-meta .sermons-cata {
         margin-bottom: 30px; } }
@@ -1245,7 +1245,7 @@ img {
     .catagory-share-meta .share span:hover, .catagory-share-meta .share span:focus,
     .catagory-share-meta .share a:hover,
     .catagory-share-meta .share a:focus {
-      color: #c92f2f; }
+      color: #ffb03b; }
 
 .sermons-details-area {
   position: relative;
@@ -1296,7 +1296,7 @@ img {
             padding: 7px 0;
             display: block; }
             .footer-area .main-footer-area .single-footer-widget .footer-menu ul li a:hover {
-              color: #c92f2f; }
+              color: #ffb03b; }
       .footer-area .main-footer-area .single-footer-widget .single-latest-news {
         position: relative;
         z-index: 1;
@@ -1310,13 +1310,13 @@ img {
           font-weight: 600;
           margin-bottom: 5px; }
           .footer-area .main-footer-area .single-footer-widget .single-latest-news a:hover, .footer-area .main-footer-area .single-footer-widget .single-latest-news a:focus {
-            color: #c92f2f; }
+            color: #ffb03b; }
         .footer-area .main-footer-area .single-footer-widget .single-latest-news p {
           color: #636363;
           font-style: italic;
           margin-bottom: 0; }
           .footer-area .main-footer-area .single-footer-widget .single-latest-news p i {
-            color: #c92f2f; }
+            color: #ffb03b; }
       .footer-area .main-footer-area .single-footer-widget .contact-information p,
       .footer-area .main-footer-area .single-footer-widget .contact-information a {
         color: #c2c2c2;
@@ -1329,14 +1329,14 @@ img {
         display: flex; }
         .footer-area .main-footer-area .single-footer-widget .contact-information p i,
         .footer-area .main-footer-area .single-footer-widget .contact-information a i {
-          color: #c92f2f;
+          color: #ffb03b;
           -webkit-box-flex: 0;
           -ms-flex: 0 0 25px;
           flex: 0 0 25px;
           max-width: 25px;
           width: 25px; }
       .footer-area .main-footer-area .single-footer-widget .contact-information a:hover {
-        color: #c92f2f; }
+        color: #ffb03b; }
   .footer-area .copywrite-area {
     position: relative;
     z-index: 1;
@@ -1360,9 +1360,9 @@ img {
           .footer-area .copywrite-area .copywrite-text p {
             font-size: 13px; } }
         .footer-area .copywrite-area .copywrite-text p a {
-          color: #c92f2f; }
+          color: #ffb03b; }
           .footer-area .copywrite-area .copywrite-text p a:hover, .footer-area .copywrite-area .copywrite-text p a:focus {
-            color: #c92f2f; }
+            color: #ffb03b; }
     .footer-area .copywrite-area .footer-social-icon {
       text-align: right; }
       @media only screen and (max-width: 767px) {
@@ -1375,7 +1375,7 @@ img {
         color: #959595;
         font-size: 14px; }
         .footer-area .copywrite-area .footer-social-icon a:hover, .footer-area .copywrite-area .footer-social-icon a:focus {
-          color: #c92f2f; }
+          color: #ffb03b; }
 
 /* :: 16.0 Breadcumb Area CSS */
 .breadcrumb-area {
@@ -1396,7 +1396,7 @@ img {
         color: #1f1f2c;
         font-weight: 600; }
         .breadcrumb-area .breadcrumb .breadcrumb-item a:hover, .breadcrumb-area .breadcrumb .breadcrumb-item a:focus {
-          color: #c92f2f; }
+          color: #ffb03b; }
     .breadcrumb-area .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
       color: #1f1f2c;
       font-family: 'FontAwesome';
@@ -1422,7 +1422,7 @@ img {
       font-weight: 600;
       margin-bottom: 15px; }
       .single-blog-post .post-content .post-title h4:hover {
-        color: #c92f2f; }
+        color: #ffb03b; }
     .single-blog-post .post-content .post-meta {
       position: relative;
       z-index: 1;
@@ -1435,9 +1435,9 @@ img {
           margin-right: 15px;
           padding-right: 15px; }
         .single-blog-post .post-content .post-meta a i {
-          color: #c92f2f; }
+          color: #ffb03b; }
         .single-blog-post .post-content .post-meta a:hover, .single-blog-post .post-content .post-meta a:focus {
-          color: #c92f2f; }
+          color: #ffb03b; }
     .single-blog-post .post-content .post-excerpt {
       font-size: 14px;
       color: #636363;
@@ -1500,16 +1500,16 @@ img {
           line-height: 28px;
           font-size: 12px;
           text-align: center;
-          color: #c92f2f;
+          color: #ffb03b;
           display: inline-block;
           border-radius: 2px;
           box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
           text-transform: uppercase;
           font-weight: 700; }
           .comment_area .single_comment_area .comment-wrapper .comment-content a:hover {
-            border-color: #c92f2f;
+            border-color: #ffb03b;
             color: #ffffff;
-            background-color: #c92f2f; }
+            background-color: #ffb03b; }
 
 .single_comment_area ol li.single_comment_area {
   margin-left: 130px; }
@@ -1543,12 +1543,12 @@ img {
       font-size: 16px; }
       .pagination-area .pagination .page-item .page-link:hover, .pagination-area .pagination .page-item .page-link:focus {
         color: #ffffff;
-        border-color: #c92f2f;
-        background-color: #c92f2f; }
+        border-color: #ffb03b;
+        background-color: #ffb03b; }
     .pagination-area .pagination .page-item.active .page-link {
       color: #ffffff;
-      border-color: #c92f2f;
-      background-color: #c92f2f; }
+      border-color: #ffb03b;
+      background-color: #ffb03b; }
 
 /* :: 19.0 Events Area CSS */
 .events-title h2 {
@@ -1624,7 +1624,7 @@ img {
       line-height: 1.7;
       font-weight: 600; }
       .single-widget-area .single-latest-post .post-title h6:hover, .single-widget-area .single-latest-post .post-title h6:focus {
-        color: #c92f2f; }
+        color: #ffb03b; }
     .single-widget-area .single-latest-post p {
       color: #959595;
       font-style: italic; }
@@ -1638,7 +1638,7 @@ img {
           margin-bottom: 0; }
         .single-widget-area .single-latest-post .sermons-meta-data p i {
           width: 15px;
-          color: #c92f2f; }
+          color: #ffb03b; }
         .single-widget-area .single-latest-post .sermons-meta-data p span {
           font-style: italic;
           color: #636363; }
@@ -1654,8 +1654,8 @@ img {
     border-radius: 2px; }
     .single-widget-area .popular-tags li a:hover, .single-widget-area .popular-tags li a:focus {
       color: #ffffff;
-      border-color: #c92f2f;
-      background-color: #c92f2f; }
+      border-color: #ffb03b;
+      background-color: #ffb03b; }
   .single-widget-area .crose-catagories {
     position: relative;
     z-index: 1; }
@@ -1666,7 +1666,7 @@ img {
       line-height: 1;
       color: #636363; }
       .single-widget-area .crose-catagories li a:hover {
-        color: #c92f2f; }
+        color: #ffb03b; }
       .single-widget-area .crose-catagories li a i {
         margin-right: 5px; }
     .single-widget-area .crose-catagories li:last-child a {
@@ -1682,7 +1682,7 @@ img {
       color: #636363;
       margin-bottom: 20px; }
       .single-widget-area .crose-archives li a:hover {
-        color: #c92f2f; }
+        color: #ffb03b; }
     .single-widget-area .crose-archives li:last-child a {
       margin-bottom: 0; }
   .single-widget-area .search-form {
@@ -1712,7 +1712,7 @@ img {
       -webkit-transition-duration: 500ms;
       transition-duration: 500ms; }
       .single-widget-area .search-form button:hover {
-        color: #c92f2f; }
+        color: #ffb03b; }
 
 .single-post-details-area {
   position: relative;
@@ -1749,7 +1749,7 @@ img {
         color: #959595;
         margin-left: 3px; }
       .single-post-details-area .post-content .post-meta a:hover {
-        color: #c92f2f; }
+        color: #ffb03b; }
   .single-post-details-area .post-content p {
     font-size: 16px;
     color: #636363; }
@@ -1757,7 +1757,7 @@ img {
     position: relative;
     z-index: 1;
     padding: 0 30px;
-    border-left: 2px solid #c92f2f;
+    border-left: 2px solid #ffb03b;
     margin: 25px 0; }
     .single-post-details-area .post-content blockquote .blockquote-text h6 {
       font-weight: 600;
@@ -1786,7 +1786,7 @@ img {
     color: #959595;
     font-style: italic; }
     .post-tags-share .popular-tags li a:hover, .post-tags-share .popular-tags li a:focus {
-      color: #c92f2f; }
+      color: #ffb03b; }
   .post-tags-share .post-share span {
     font-size: 14px; }
   .post-tags-share .post-share a {
@@ -1794,7 +1794,7 @@ img {
     display: inline-block;
     padding: 0 10px; }
     .post-tags-share .post-share a:hover, .post-tags-share .post-share a:focus {
-      color: #c92f2f; }
+      color: #ffb03b; }
     @media only screen and (max-width: 767px) {
       .post-tags-share .post-share a {
         padding: 0 5px; } }
@@ -1884,7 +1884,7 @@ img {
   transition-duration: 500ms; }
   .contact-form-area .form-control:focus {
     box-shadow: none;
-    border-color: #c92f2f; }
+    border-color: #ffb03b; }
 .contact-form-area textarea.form-control {
   height: 150px; }
 
