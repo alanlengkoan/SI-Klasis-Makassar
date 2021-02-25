@@ -59,6 +59,7 @@ return [
         '/galeri' => [[['_route' => 'galeri', '_controller' => 'App\\Controller\\GaleriController::index'], null, null, null, false, false, null]],
         '/gereja' => [[['_route' => 'gereja', '_controller' => 'App\\Controller\\GerejaController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
+        '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\SecurityController::register'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/superadmin/akun' => [[['_route' => 'superadmin_akun', '_controller' => 'App\\Controller\\SuperAdmin\\AkunController::index'], null, null, null, false, false, null]],
         '/superadmin/akun/upd_foto' => [[['_route' => 'superadmin_upd_foto', '_controller' => 'App\\Controller\\SuperAdmin\\AkunController::upd_foto'], null, null, null, false, false, null]],

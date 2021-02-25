@@ -56,6 +56,7 @@ return [
     'gereja' => [[], ['_controller' => 'App\\Controller\\GerejaController::index'], [], [['text', '/gereja']], [], []],
     'gereja_detail' => [['id'], ['_controller' => 'App\\Controller\\GerejaController::detail'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/gereja']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
+    'app_register' => [[], ['_controller' => 'App\\Controller\\SecurityController::register'], [], [['text', '/register']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
     'superadmin_akun' => [[], ['_controller' => 'App\\Controller\\SuperAdmin\\AkunController::index'], [], [['text', '/superadmin/akun']], [], []],
     'superadmin_upd_foto' => [[], ['_controller' => 'App\\Controller\\SuperAdmin\\AkunController::upd_foto'], [], [['text', '/superadmin/akun/upd_foto']], [], []],

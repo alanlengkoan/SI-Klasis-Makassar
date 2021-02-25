@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '4fcc78f6d4b2e71a9b3bc595f37db73c0e07f1f0',
+    'reference' => '778eb8a8fac1376cc1e25804f2d7a66afdab96b3',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '4fcc78f6d4b2e71a9b3bc595f37db73c0e07f1f0',
+      'reference' => '778eb8a8fac1376cc1e25804f2d7a66afdab96b3',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -490,12 +490,12 @@
     ),
     'symfony/maker-bundle' => 
     array (
-      'pretty_version' => 'v1.25.0',
-      'version' => '1.25.0.0',
+      'pretty_version' => 'v1.29.1',
+      'version' => '1.29.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '6d2da12632f5c8b9aa7b159f0bb46f245289434a',
+      'reference' => '313b5669a5370bf36cd34fa8f5b5bbbfa5fb8aa8',
     ),
     'symfony/mime' => 
     array (
