@@ -116,7 +116,10 @@ return [
                     .')'
                 .')'
                 .'|/berita/([^/]++)(*:185)'
-                .'|/gereja/([^/]++)(*:209)'
+                .'|/gereja/(?'
+                    .'|([^/]++)(*:212)'
+                    .'|warta/([^/]++)(*:234)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -128,8 +131,9 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         185 => [[['_route' => 'berita_detail', '_controller' => 'App\\Controller\\BeritaController::detail'], ['id'], null, null, false, true, null]],
-        209 => [
-            [['_route' => 'gereja_detail', '_controller' => 'App\\Controller\\GerejaController::detail'], ['id'], null, null, false, true, null],
+        212 => [[['_route' => 'gereja_detail', '_controller' => 'App\\Controller\\GerejaController::detail'], ['id'], null, null, false, true, null]],
+        234 => [
+            [['_route' => 'gereja_warta', '_controller' => 'App\\Controller\\GerejaController::warta'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

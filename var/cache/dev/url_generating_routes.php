@@ -71,6 +71,7 @@ return [
     'galeri' => [[], ['_controller' => 'App\\Controller\\GaleriController::index'], [], [['text', '/galeri']], [], []],
     'gereja' => [[], ['_controller' => 'App\\Controller\\GerejaController::index'], [], [['text', '/gereja']], [], []],
     'gereja_detail' => [['id'], ['_controller' => 'App\\Controller\\GerejaController::detail'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/gereja']], [], []],
+    'gereja_warta' => [['id'], ['_controller' => 'App\\Controller\\GerejaController::warta'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/gereja/warta']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\SecurityController::register'], [], [['text', '/register']], [], []],
     'app_register_add' => [[], ['_controller' => 'App\\Controller\\SecurityController::add'], [], [['text', '/register/add']], [], []],

@@ -3076,6 +3076,110 @@
       <call method="setRepositoryFactory">
         <argument type="service" id="doctrine.orm.container_repository_factory"/>
       </call>
+      <call method="addCustomStringFunction">
+        <argument>md5</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomStringFunction">
+        <argument>group_concat</argument>
+        <argument>Oro\ORM\Query\AST\Functions\String\GroupConcat</argument>
+      </call>
+      <call method="addCustomStringFunction">
+        <argument>concat_ws</argument>
+        <argument>Oro\ORM\Query\AST\Functions\String\ConcatWs</argument>
+      </call>
+      <call method="addCustomStringFunction">
+        <argument>cast</argument>
+        <argument>Oro\ORM\Query\AST\Functions\Cast</argument>
+      </call>
+      <call method="addCustomStringFunction">
+        <argument>replace</argument>
+        <argument>Oro\ORM\Query\AST\Functions\String\Replace</argument>
+      </call>
+      <call method="addCustomStringFunction">
+        <argument>date_format</argument>
+        <argument>Oro\ORM\Query\AST\Functions\String\DateFormat</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>timestampdiff</argument>
+        <argument>Oro\ORM\Query\AST\Functions\Numeric\TimestampDiff</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>dayofyear</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>dayofmonth</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>dayofweek</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>week</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>day</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>hour</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>minute</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>month</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>quarter</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>second</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>year</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>sign</argument>
+        <argument>Oro\ORM\Query\AST\Functions\Numeric\Sign</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>pow</argument>
+        <argument>Oro\ORM\Query\AST\Functions\Numeric\Pow</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>round</argument>
+        <argument>Oro\ORM\Query\AST\Functions\Numeric\Round</argument>
+      </call>
+      <call method="addCustomNumericFunction">
+        <argument>ceil</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomDatetimeFunction">
+        <argument>date</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomDatetimeFunction">
+        <argument>time</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomDatetimeFunction">
+        <argument>timestamp</argument>
+        <argument>Oro\ORM\Query\AST\Functions\SimpleFunction</argument>
+      </call>
+      <call method="addCustomDatetimeFunction">
+        <argument>convert_tz</argument>
+        <argument>Oro\ORM\Query\AST\Functions\DateTime\ConvertTz</argument>
+      </call>
     </service>
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
       <argument type="service" id="annotations.cached_reader"/>

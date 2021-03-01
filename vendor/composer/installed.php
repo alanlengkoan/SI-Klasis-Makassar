@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '778eb8a8fac1376cc1e25804f2d7a66afdab96b3',
+    'reference' => 'e945336cc756d5819ceeaa283f98b332b7293ac4',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '778eb8a8fac1376cc1e25804f2d7a66afdab96b3',
+      'reference' => 'e945336cc756d5819ceeaa283f98b332b7293ac4',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -164,6 +164,15 @@
       ),
       'reference' => '56070bebac6e77230ed7d306ad13528e60732871',
     ),
+    'dompdf/dompdf' => 
+    array (
+      'pretty_version' => 'v1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8768448244967a46d6e67b891d30878e0e15d25c',
+    ),
     'nikic/php-parser' => 
     array (
       'pretty_version' => 'v4.10.3',
@@ -189,12 +198,39 @@
       ),
       'reference' => '4d154742e31c35137d5374c998e8f86b54db2e2f',
     ),
+    'oro/doctrine-extensions' => 
+    array (
+      'pretty_version' => '1.3.1',
+      'version' => '1.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '3dd513580393ba8a1040c2095e2949ce549cb038',
+    ),
     'paragonie/random_compat' => 
     array (
       'replaced' => 
       array (
         0 => '2.*',
       ),
+    ),
+    'phenx/php-font-lib' => 
+    array (
+      'pretty_version' => '0.5.2',
+      'version' => '0.5.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ca6ad461f032145fff5971b5985e5af9e7fa88d8',
+    ),
+    'phenx/php-svg-lib' => 
+    array (
+      'pretty_version' => 'v0.3.3',
+      'version' => '0.3.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '5fa61b65e612ce1ae15f69b3d223cb14ecc60e32',
     ),
     'psr/cache' => 
     array (
@@ -266,6 +302,15 @@
       array (
         0 => '1.0',
       ),
+    ),
+    'sabberworm/php-css-parser' => 
+    array (
+      'pretty_version' => '8.3.1',
+      'version' => '8.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd217848e1396ef962fb1997cf3e2421acba7f796',
     ),
     'sensio/framework-extra-bundle' => 
     array (
