@@ -46,4 +46,20 @@ class TbKeuanganRincianRepository extends ServiceEntityRepository
         $qry = $this->mng->createQuery($sql)->getResult();
         return $qry;
     }
+
+    // untuk mengambil data pemasukan
+    public function getDetailPemasukan($id, $tglawal, $tglakhir)
+    {
+        $sql = "SELECT kr.id_keuangan_rincian, kr.debit, kr.keterangan, kr.gambar, kr.tanggal, k.nama AS nama_keuangan FROM App\Entity\TbKeuanganRincian kr LEFT JOIN App\Entity\TbKeuangan k WITH kr.id_keuangan= k.id_keuangan WHERE kr.id_gereja = '$id' AND kr.status_u = 'd' AND (kr.tanggal BETWEEN '$tglawal' AND '$tglakhir')";
+        $qry = $this->mng->createQuery($sql)->getResult();
+        return $qry;
+    }
+
+    // untuk mengambil data pengeluaran
+    public function getDetailPengeluaran($id, $tglawal, $tglakhir)
+    {
+        $sql = "SELECT kr.id_keuangan_rincian, kr.kredit, kr.keterangan, kr.gambar, kr.tanggal, k.nama AS nama_keuangan FROM App\Entity\TbKeuanganRincian kr LEFT JOIN App\Entity\TbKeuangan k WITH kr.id_keuangan= k.id_keuangan WHERE kr.id_gereja = '$id' AND kr.status_u = 'k' AND (kr.tanggal BETWEEN '$tglawal' AND '$tglakhir')";
+        $qry = $this->mng->createQuery($sql)->getResult();
+        return $qry;
+    }
 }
