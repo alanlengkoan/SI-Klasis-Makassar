@@ -15,8 +15,6 @@
 {% block body %}
 {# begin:: body #}
 <main id="main">
-    <a href="/gereja/warta/{{ detail.id_gereja }}" target="_blank">Warta Jemaat</a>
-
     {# begin:: tentang #}
     <section id="tentang" class="tentang">
         <div class="container">
@@ -37,19 +35,16 @@
                         <h4>Lokasi:</h4>
                         <p>{{ detail.alamat }}</p>
                     </div>
-
                     <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
                         <i class="icofont-clock-time icofont-rotate-90"></i>
                         <h4>Jam Ibadah:</h4>
                         <p>{{ detail.jadwal_ibadah }}</p>
                     </div>
-
                     <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
                         <i class="icofont-envelope"></i>
                         <h4>Email:</h4>
                         <p>{{ detail.email }}</p>
                     </div>
-
                     <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
                         <i class="icofont-phone"></i>
                         <h4>Telepon:</h4>
@@ -60,6 +55,25 @@
         </div>
     </section>
     {# end:: tentang #}
+
+    {# begin:: warta #}
+    <section id="warta" class="warta">
+        <div class="container">
+            <div class="section-title">
+                <h1>Warta Jemaat</h1>
+            </div>
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-lg-12 col-md-12">
+                        <a href="/gereja/warta/{{ detail.id_gereja }}" target="_blank" style="font-size: 50px">
+                            <i class="icofont-book"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# end:: warta #}
 
     {# begin:: jadwal ibadah minggu #}
     <section id="jadwal" class="jadwal">

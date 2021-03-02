@@ -32,19 +32,23 @@
 <body>
     <div class="row">
         <div class="column" style="text-align: center;">
-            <table border="1" align="center">
+            <table align="center">
                 <tr>
-                    <td>logo</td>
+                    <td>
+                        <img src="{{ app.request.uriForPath('/uploads/akun/'~detail.foto) }}" width="50" heigth="50" />
+                    </td>
                     <td align="center">
-                        <h5 style="margin: 0;">Gereja Toraja Mamasa</h5>
-                        <p style="font-size: 11px; margin: 0;">(Anggota Persekutuan Gereja-Gereja di Indonesia)</p>
+                        <h3 style="margin: 0;">Gereja Toraja Mamasa</h3>
+                        <p style="font-size: 13px; margin: 0;">(Anggota Persekutuan Gereja-Gereja di Indonesia)</p>
                         <h5 style="margin: 0;">{{ detail.nama }}</h5>
-                        <i style="font-size: 11px;">{{ detail.alamat }}</i>
+                        <i style="font-size: 13px;">{{ detail.alamat }}</i>
                     </td>
                 </tr>
             </table>
             <h2>Warta Jemaat</h2>
-            <table border="1" align="center">
+            <h2>{{ tanggal|date('d-m-Y') }}</h2>
+            <img style="margin-top: 40px; margin-bottom: 10px;" src="https://bengkuluekspress.com/wp-content/uploads/2018/12/gereja.jpg" width="400" height="400">
+            <table align="center">
                 <tr>
                     <td align="center">
                         <p>
@@ -55,8 +59,8 @@
             </table>
         </div>
         <div class="column" style="text-align: center;">
-            <h2 style="margin: 0;">Ibadah Minggu</h2>
-            <table border="1" align="center">
+            <h2>Ibadah Minggu</h2>
+            <table border="1" align="center" style="width: 100%">
                 <tr>
                     <td>Jam</td>
                     <td>Pelayan</td>
@@ -74,16 +78,17 @@
                     </tr>
                 {% endif %}
             </table>
-            <h2 style="margin: 0;">Jadwal Ibadah</h2>
-            <table border="1" align="center">
+            {% for key, value in jadwal_ibadah_harian %}
+            <h2>Jadwal Ibadah {{ key }}</h2>
+            <table border="1" align="center" style="width: 100%">
                 <tr>
                     <td>Tanggal</td>
                     <td>Jam</td>
                     <td>Nama Keluarga</td>
                     <td>Pelayan</td>
                 </tr>
-                {% if jadwal_ibadah_harian|length != 0 %}
-                    {% for rows in jadwal_ibadah_harian %}
+                {% if value|length != 0 %}
+                    {% for rows in value %}
                     <tr>
                         <td>{{ rows.tanggal_ibadah|date('d-m-Y') }}</td>
                         <td>{{ rows.tanggal_ibadah|date('H:s') }}</td>
@@ -97,17 +102,20 @@
                     </tr>
                 {% endif %}
             </table>
-            <h2 style="margin: 0;">Ulang Tahun</h2>
-            <table border="1" align="center">
+            {% endfor %}
+            <h2>Ulang Tahun</h2>
+            <table border="1" align="center" style="width: 100%">
                 <tr>
                     <td>Tanggal</td>
                     <td>Nama</td>
+                    <td>Umur</td>
                 </tr>
                 {% if ulang_tahun|length != 0 %}
                     {% for rows in ulang_tahun %}
                     <tr>
                         <td>{{ rows.tgl_lahir|date('d-m-Y') }}</td>
                         <td>{{ rows.nama }}</td>
+                        <td>{{ rows.tgl_lahir|date('Y-m-d')|umur }}</td>
                     </tr>
                     {% endfor %}
                 {% else %}
@@ -118,8 +126,8 @@
             </table>
         </div>
         <div class="column" style="">
-            <h2 style="margin: 0; text-align: center;">Laporan Keuangan</h2>
-            <h3 style="margin: 0;">Penerimaan</h3>
+            <h2 style="text-align: center;">Laporan Keuangan</h2>
+            <h3>Penerimaan</h3>
             <table border="1">
                 <tr>
                     <td>No.</td>
@@ -148,7 +156,7 @@
                     </tr>
                 {% endif %}
             </table>
-            <h3 style="margin: 0;">Pengeluaran</h3>
+            <h3>Pengeluaran</h3>
             <table border="1">
                 <tr>
                     <td>No.</td>

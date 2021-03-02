@@ -32,9 +32,9 @@ class TbJadwalRincianRepository extends ServiceEntityRepository
     }
 
     // untuk mengambil jadwal ibadah harian
-    public function getDetailDate($id, $tgl_awal, $tgl_akhir)
+    public function getDetailDate($id, $id_jadwal, $tgl_awal, $tgl_akhir)
     {
-        $sql = "SELECT jr.id_jadwal_rincian, j.nama, jr.nama_keluarga, jr.nama_pelayan, jr.alamat, jr.tanggal_ibadah FROM App\Entity\TbJadwalRincian jr LEFT JOIN App\Entity\TbJadwal j WITH jr.id_jadwal = j.id_jadwal WHERE jr.id_gereja = '$id' AND (DATE(jr.tanggal_ibadah) BETWEEN '$tgl_awal' AND '$tgl_akhir')";
+        $sql = "SELECT jr.id_jadwal_rincian, j.nama, jr.nama_keluarga, jr.nama_pelayan, jr.alamat, jr.tanggal_ibadah FROM App\Entity\TbJadwalRincian jr LEFT JOIN App\Entity\TbJadwal j WITH jr.id_jadwal = j.id_jadwal WHERE jr.id_gereja = '$id' AND jr.id_jadwal = '$id_jadwal' AND (DATE(jr.tanggal_ibadah) BETWEEN '$tgl_awal' AND '$tgl_akhir')";
         $qry = $this->mng->createQuery($sql)->getResult();
         return $qry;
     }

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\TbGereja;
 use App\Entity\TbInformasi;
+use App\Entity\TbJadwal;
 use App\Entity\TbJadwalMinggu;
 use App\Entity\TbJadwalRincian;
 use App\Entity\TbJemaat;
@@ -12,6 +13,7 @@ use App\Entity\TbPengurus;
 use App\Service\MyfunctionHelper;
 use Dompdf\Dompdf;
 use Doctrine\ORM\EntityManagerInterface;
+use Dompdf\Options;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -65,9 +67,18 @@ class GerejaController extends AbstractController
         $tanggal_awal  = date('Y-m-d', strtotime('-7 days'));
         $tanggal_akhir = date('Y-m-d');
 
+        $jenis_ibadah = $this->mng->getRepository(TbJadwal::class)->getAll();
+        $jadwal_ibadah_harian = [];
+        foreach ($jenis_ibadah as $key => $value) {
+            $jadwal_ibadah = $this->mng->getRepository(TbJadwalRincian::class)->getDetailDate($id, $value['id_jadwal'], $tanggal_awal, $tanggal_akhir);
+
+            $jadwal_ibadah_harian[$value['nama']] = $jadwal_ibadah;
+        }
+
         $data = [
+            'tanggal'              => $tanggal_akhir,
             'detail'               => $this->mng->getRepository(TbGereja::class)->getDetail($id),
-            'jadwal_ibadah_harian' => $this->mng->getRepository(TbJadwalRincian::class)->getDetailDate($id, $tanggal_awal, $tanggal_akhir),
+            'jadwal_ibadah_harian' => $jadwal_ibadah_harian,
             'jadwal_ibadah_minggu' => $this->mng->getRepository(TbJadwalMinggu::class)->getDetailDate($id, $tanggal_akhir),
             'ulang_tahun'          => $this->mng->getRepository(TbJemaat::class)->getDetailDate($id, $tanggal_awal, $tanggal_akhir),
             'keuangan_pemasukan'   => $this->mng->getRepository(TbKeuanganRincian::class)->getDetailPemasukan($id, $tanggal_awal, $tanggal_akhir),
@@ -75,9 +86,11 @@ class GerejaController extends AbstractController
         ];
 
         // untuk membuat pdf
-        $dompdf = new Dompdf();
+        $options = new Options();
+        $options->set('isRemoteEnabled', TRUE);
+        
+        $dompdf = new Dompdf($options);
         $html = $this->render('warta.html.twig', $data)->getContent();
-        // return $this->render('warta.html.twig', $data);
         $dompdf->loadHtml($html);
         $dompdf->setPaper('legal', 'landscape');
         $dompdf->render();
