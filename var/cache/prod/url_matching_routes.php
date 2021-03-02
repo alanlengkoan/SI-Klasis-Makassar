@@ -30,6 +30,10 @@ return [
         '/admin/jadwal_minggu/get' => [[['_route' => 'admin_jadwal_minggu_get', '_controller' => 'App\\Controller\\Admin\\JadwalMingguController::get_data'], null, null, null, false, false, null]],
         '/admin/jadwal_minggu/upd' => [[['_route' => 'admin_jadwal_minggu_upd', '_controller' => 'App\\Controller\\Admin\\JadwalMingguController::upd'], null, null, null, false, false, null]],
         '/admin/jadwal_minggu/del' => [[['_route' => 'admin_jadwal_minggu_del', '_controller' => 'App\\Controller\\Admin\\JadwalMingguController::del'], null, null, null, false, false, null]],
+        '/admin/jemaat' => [[['_route' => 'admin_jemaat', '_controller' => 'App\\Controller\\Admin\\JemaatController::index'], null, null, null, false, false, null]],
+        '/admin/jemaat/get' => [[['_route' => 'admin_jemaat_get', '_controller' => 'App\\Controller\\Admin\\JemaatController::get_data'], null, null, null, false, false, null]],
+        '/admin/jemaat/upd' => [[['_route' => 'admin_jemaat_upd', '_controller' => 'App\\Controller\\Admin\\JemaatController::upd'], null, null, null, false, false, null]],
+        '/admin/jemaat/del' => [[['_route' => 'admin_jemaat_del', '_controller' => 'App\\Controller\\Admin\\JemaatController::del'], null, null, null, false, false, null]],
         '/admin/keuangan' => [[['_route' => 'admin_keuangan', '_controller' => 'App\\Controller\\Admin\\KeuanganController::index'], null, null, null, false, false, null]],
         '/admin/laporan_keuangan' => [[['_route' => 'admin_laporan_keuangan', '_controller' => 'App\\Controller\\Admin\\KeuanganController::laporan_keuangan'], null, null, null, false, false, null]],
         '/admin/pemasukan' => [[['_route' => 'admin_pemasukan', '_controller' => 'App\\Controller\\Admin\\KeuanganController::pemasukan'], null, null, null, false, false, null]],
@@ -60,6 +64,7 @@ return [
         '/gereja' => [[['_route' => 'gereja', '_controller' => 'App\\Controller\\GerejaController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\SecurityController::register'], null, null, null, false, false, null]],
+        '/register/add' => [[['_route' => 'app_register_add', '_controller' => 'App\\Controller\\SecurityController::add'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/superadmin/akun' => [[['_route' => 'superadmin_akun', '_controller' => 'App\\Controller\\SuperAdmin\\AkunController::index'], null, null, null, false, false, null]],
         '/superadmin/akun/upd_foto' => [[['_route' => 'superadmin_upd_foto', '_controller' => 'App\\Controller\\SuperAdmin\\AkunController::upd_foto'], null, null, null, false, false, null]],
@@ -91,13 +96,17 @@ return [
     [ // $regexpList
         0 => '{^(?'
                 .'|/berita/([^/]++)(*:23)'
-                .'|/gereja/([^/]++)(*:46)'
+                .'|/gereja/(?'
+                    .'|([^/]++)(*:49)'
+                    .'|warta/([^/]++)(*:70)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
         23 => [[['_route' => 'berita_detail', '_controller' => 'App\\Controller\\BeritaController::detail'], ['id'], null, null, false, true, null]],
-        46 => [
-            [['_route' => 'gereja_detail', '_controller' => 'App\\Controller\\GerejaController::detail'], ['id'], null, null, false, true, null],
+        49 => [[['_route' => 'gereja_detail', '_controller' => 'App\\Controller\\GerejaController::detail'], ['id'], null, null, false, true, null]],
+        70 => [
+            [['_route' => 'gereja_warta', '_controller' => 'App\\Controller\\GerejaController::warta'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
