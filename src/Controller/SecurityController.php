@@ -77,6 +77,7 @@ class SecurityController extends AbstractController
                     $jemaat = new TbJemaat();
                     $jemaat->setIdJemaat($this->myfun->getIdOtomatis('tb_jemaat'));
                     $jemaat->setIdGereja($post->request->get('inpgereja'));
+                    $jemaat->setNik($post->request->get('inpnik'));
                     $jemaat->setNama($post->request->get('inpnama'));
                     $jemaat->setTmpLahir($post->request->get('inptmp_lhr'));
                     $jemaat->setTglLahir(\DateTime::createFromFormat('Y-m-d', $tglLahir));

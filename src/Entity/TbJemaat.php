@@ -28,6 +28,11 @@ class TbJemaat
     private $id_gereja;
 
     /**
+     * @ORM\Column(type="string", length=20, nullable=true)
+     */
+    private $nik;
+
+    /**
      * @ORM\Column(type="string", length=45, nullable=true)
      */
     private $nama;
@@ -97,6 +102,18 @@ class TbJemaat
     public function setIdGereja(?int $id_gereja): self
     {
         $this->id_gereja = $id_gereja;
+
+        return $this;
+    }
+
+    public function getNik(): ?string
+    {
+        return $this->nik;
+    }
+
+    public function setNik(?string $nik): self
+    {
+        $this->nik = $nik;
 
         return $this;
     }

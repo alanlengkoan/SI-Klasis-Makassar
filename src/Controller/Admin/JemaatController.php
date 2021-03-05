@@ -51,6 +51,7 @@ class JemaatController extends AbstractController
         $data = [
             'id_jemaat' => $jemaat->getIdJemaat(),
             'id_gereja' => $jemaat->getIdGereja(),
+            'nik'       => $jemaat->getNik(),
             'nama'      => $jemaat->getNama(),
             'tmp_lahir' => $jemaat->getTmpLahir(),
             'tgl_lahir' => $jemaat->getTglLahir()->format('Y-m-d'),
@@ -79,6 +80,7 @@ class JemaatController extends AbstractController
 
                     $tglLahir = date('Y-m-d', strtotime($post->request->get('inptgl_lhr')));
 
+                    $jemaat->setNik($post->request->get('inpnik'));
                     $jemaat->setNama($post->request->get('inpnama'));
                     $jemaat->setTmpLahir($post->request->get('inptmp_lhr'));
                     $jemaat->setTglLahir(\DateTime::createFromFormat('Y-m-d', $tglLahir));
