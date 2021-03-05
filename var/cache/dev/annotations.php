@@ -665,6 +665,10 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CTbJemaat%23getIdGereja%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CTbJemaat%23setIdGereja%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CTbJemaat%23setIdGereja%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CTbJemaat%23getNik%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CTbJemaat%23getNik%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CTbJemaat%23setNik%5D%5B1%5D' => 1,
+'%5B%5BC%5DApp%5CEntity%5CTbJemaat%23setNik%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CTbJemaat%23getNama%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CTbJemaat%23getNama%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CTbJemaat%23setNama%5D%5B1%5D' => 1,
@@ -707,6 +711,8 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CTbJemaat%24id_jemaat%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CTbJemaat%24id_gereja%5D%5B1%5D' => 91,
 '%5B%5BC%5DApp%5CEntity%5CTbJemaat%24id_gereja%5D%5B1%5D' => 2,
+'%5BApp%5CEntity%5CTbJemaat%24nik%5D%5B1%5D' => 99,
+'%5B%5BC%5DApp%5CEntity%5CTbJemaat%24nik%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CTbJemaat%24nama%5D%5B1%5D' => 105,
 '%5B%5BC%5DApp%5CEntity%5CTbJemaat%24nama%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CTbJemaat%24tmp_lahir%5D%5B1%5D' => 105,
@@ -1548,7 +1554,7 @@ return [[
 
 0 => 'N;',
 1 => [],
-2 => 1614592352,
+2 => 1614941662,
 3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

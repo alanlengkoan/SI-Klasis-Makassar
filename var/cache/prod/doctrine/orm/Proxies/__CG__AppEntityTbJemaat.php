@@ -66,10 +66,10 @@ class TbJemaat extends \App\Entity\TbJemaat implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id_jemaat', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id_gereja', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'nama', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'tmp_lahir', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'tgl_lahir', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'jen_kel', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'alamat', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'pekerjaan', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'no_telpon', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'upd'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id_jemaat', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id_gereja', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'nik', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'nama', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'tmp_lahir', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'tgl_lahir', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'jen_kel', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'alamat', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'pekerjaan', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'no_telpon', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'upd'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id_jemaat', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id_gereja', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'nama', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'tmp_lahir', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'tgl_lahir', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'jen_kel', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'alamat', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'pekerjaan', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'no_telpon', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'upd'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id_jemaat', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'id_gereja', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'nik', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'nama', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'tmp_lahir', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'tgl_lahir', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'jen_kel', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'alamat', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'pekerjaan', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'no_telpon', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\TbJemaat' . "\0" . 'upd'];
     }
 
     /**
@@ -233,6 +233,28 @@ class TbJemaat extends \App\Entity\TbJemaat implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIdGereja', [$id_gereja]);
 
         return parent::setIdGereja($id_gereja);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getNik(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNik', []);
+
+        return parent::getNik();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setNik(?string $nik): \App\Entity\TbJemaat
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNik', [$nik]);
+
+        return parent::setNik($nik);
     }
 
     /**

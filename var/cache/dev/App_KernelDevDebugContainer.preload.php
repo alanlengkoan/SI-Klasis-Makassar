@@ -445,3 +445,15 @@ $classes[] = 'Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator';
 $classes[] = 'Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener';
 
 Preloader::preload($classes);
+
+$classes = [];
+$classes[] = 'Symfony\\Component\\Validator\\Mapping\\ClassMetadata';
+$classes[] = 'Symfony\\Component\\Form\\Extension\\Validator\\Constraints\\Form';
+$classes[] = 'Symfony\\Component\\Routing\\Generator\\CompiledUrlGenerator';
+$classes[] = 'Symfony\\Bundle\\FrameworkBundle\\Routing\\RedirectableCompiledUrlMatcher';
+$classes[] = 'Symfony\\Component\\Routing\\Annotation\\Route';
+$classes[] = 'Doctrine\\ORM\\Mapping\\Entity';
+$classes[] = 'Doctrine\\ORM\\Mapping\\Id';
+$classes[] = 'Doctrine\\ORM\\Mapping\\GeneratedValue';
+$classes[] = 'Doctrine\\ORM\\Mapping\\Column';
+Preloader::preload($classes);
