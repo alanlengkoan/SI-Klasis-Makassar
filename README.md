@@ -1,1 +1,1 @@
-# SI-Klasis-Makassar
+# SI-Klasis-Makassar Sistem Informasi
