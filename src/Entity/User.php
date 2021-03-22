@@ -50,6 +50,21 @@ class User implements UserInterface
     private $password;
 
     /**
+     * @ORM\Column(type="string", length=15, nullable=true)
+     */
+    private $telepon;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $alamat;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $jadwal_ibadah_operasional;
+
+    /**
      * @ORM\Column(type="json")
      */
     private $roles = [];
@@ -162,6 +177,42 @@ class User implements UserInterface
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function getTelepon(): ?string
+    {
+        return $this->telepon;
+    }
+
+    public function setTelepon(?string $telepon): self
+    {
+        $this->telepon = $telepon;
+
+        return $this;
+    }
+
+    public function getAlamat(): ?string
+    {
+        return $this->alamat;
+    }
+
+    public function setAlamat(?string $alamat): self
+    {
+        $this->alamat = $alamat;
+
+        return $this;
+    }
+
+    public function getJadwalIbadahOperasional(): ?string
+    {
+        return $this->jadwal_ibadah_operasional;
+    }
+
+    public function setJadwalIbadahOperasional(?string $jadwal_ibadah_operasional): self
+    {
+        $this->jadwal_ibadah_operasional = $jadwal_ibadah_operasional;
 
         return $this;
     }

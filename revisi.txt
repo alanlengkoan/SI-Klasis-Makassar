@@ -1,0 +1,9 @@
+done :
+tampilankan ibadah berdasarkan jenis ibadah
+
+revisi :
+tambahkan no telfon, jam operasional, alamat/lokasi
+
+jadwal_ibadah_operasional longtext
+telepon 15
+alamat longtext

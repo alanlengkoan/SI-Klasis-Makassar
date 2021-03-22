@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'fcdc71cdaa1eb6a759f35a3e0adeddca83a7442d',
+    'reference' => 'e7f24e2697f8be276dbfdb4a7f209e2877675788',
     'name' => '__root__',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'fcdc71cdaa1eb6a759f35a3e0adeddca83a7442d',
+      'reference' => 'e7f24e2697f8be276dbfdb4a7f209e2877675788',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -195,15 +195,6 @@ private static $installed = array (
       array (
       ),
       'reference' => '8768448244967a46d6e67b891d30878e0e15d25c',
-    ),
-    'nikic/php-parser' => 
-    array (
-      'pretty_version' => 'v4.10.3',
-      'version' => '4.10.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'dbe56d23de8fcb157bbc0cfb3ad7c7de0cfb0984',
     ),
     'ocramius/package-versions' => 
     array (
@@ -555,15 +546,6 @@ private static $installed = array (
       array (
       ),
       'reference' => 'eaac169bf64d307d48daef7e349729d670df6659',
-    ),
-    'symfony/maker-bundle' => 
-    array (
-      'pretty_version' => 'v1.29.1',
-      'version' => '1.29.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '313b5669a5370bf36cd34fa8f5b5bbbfa5fb8aa8',
     ),
     'symfony/mime' => 
     array (

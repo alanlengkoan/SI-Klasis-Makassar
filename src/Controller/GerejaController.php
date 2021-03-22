@@ -10,6 +10,7 @@ use App\Entity\TbJadwalRincian;
 use App\Entity\TbJemaat;
 use App\Entity\TbKeuanganRincian;
 use App\Entity\TbPengurus;
+use App\Entity\User;
 use App\Service\MyfunctionHelper;
 use Dompdf\Dompdf;
 use Doctrine\ORM\EntityManagerInterface;
@@ -35,6 +36,7 @@ class GerejaController extends AbstractController
     {
         $data = [
             'halaman' => 'Gereja',
+            'klasis'  => $this->mng->getRepository(User::class)->getDetail('1'),
             'gereja'  => $this->mng->getRepository(TbGereja::class)->getAll(),
         ];
 
@@ -48,6 +50,7 @@ class GerejaController extends AbstractController
     {
         $data = [
             'halaman'       => 'Detail Gereja',
+            'klasis'        => $this->mng->getRepository(User::class)->getDetail('1'),
             'gereja'        => $this->mng->getRepository(TbGereja::class)->getAll(),
             'detail'        => $this->mng->getRepository(TbGereja::class)->getDetail($id),
             'jadwal_minggu' => $this->mng->getRepository(TbJadwalMinggu::class)->getDetail($id),

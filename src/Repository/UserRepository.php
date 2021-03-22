@@ -43,7 +43,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
     // untuk mengambil detail gereja dan user
     public function getDetail($id)
     {
-        $sql = "SELECT u.id_users, u.nama, u.email, u.foto, u.username FROM App\Entity\User u WHERE u.id_users='$id'";
+        $sql = "SELECT u.id_users, u.nama, u.email, u.foto, u.username, u.telepon, u.alamat, u.jadwal_ibadah_operasional AS jadwal_ibadah FROM App\Entity\User u WHERE u.id_users='$id'";
         $qry = $this->mng->createQuery($sql)->getOneOrNullResult();
         return $qry;
     }

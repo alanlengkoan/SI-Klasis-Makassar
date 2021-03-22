@@ -28,6 +28,7 @@ class DefaultController extends AbstractController
     {
         $data = [
             'halaman' => 'Home',
+            'klasis'  => $this->mng->getRepository(User::class)->getDetail('1'),
             'gereja'  => $this->mng->getRepository(TbGereja::class)->getAll(),
             'galeri'  => $this->mng->getRepository(TbInformasi::class)->getGaleri()
         ];
@@ -42,6 +43,7 @@ class DefaultController extends AbstractController
     {
         $data = [
             'halaman' => 'Kontak',
+            'klasis'  => $this->mng->getRepository(User::class)->getDetail('1'),
             'gereja'  => $this->mng->getRepository(TbGereja::class)->getAll(),
             'user'    => $this->mng->getRepository(User::class)->findOneBy(['id_users' => '1']),
         ];
@@ -56,6 +58,7 @@ class DefaultController extends AbstractController
     {
         $data = [
             'halaman' => 'Tentang Kami',
+            'klasis'  => $this->mng->getRepository(User::class)->getDetail('1'),
             'gereja'  => $this->mng->getRepository(TbGereja::class)->getAll(),
         ];
 

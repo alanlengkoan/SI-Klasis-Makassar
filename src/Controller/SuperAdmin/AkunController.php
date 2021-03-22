@@ -107,6 +107,9 @@ class AkunController extends AbstractController
                     $user = $this->mng->getRepository(User::class)->findOneBy(['id_users' => $idu]);
                     $user->setNama($post->request->get('inpnama'));
                     $user->setEmail($post->request->get('inpemail'));
+                    $user->setJadwalIbadahOperasional($post->request->get('inpjadwalibadah'));
+                    $user->setAlamat($post->request->get('inpalamat'));
+                    $user->setTelepon($post->request->get('inptelepon'));
                     $user->setUsername($post->request->get('inpusername'));
                     $user->setUpd(date_create());
 

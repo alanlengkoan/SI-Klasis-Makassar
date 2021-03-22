@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\TbGereja;
 use App\Entity\TbInformasi;
+use App\Entity\User;
 use App\Service\MyfunctionHelper;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,6 +28,7 @@ class GaleriController extends AbstractController
     {
         $data = [
             'halaman' => 'Galeri',
+            'klasis'  => $this->mng->getRepository(User::class)->getDetail('1'),
             'data'    => $this->mng->getRepository(TbInformasi::class)->getGaleri(),
             'gereja'  => $this->mng->getRepository(TbGereja::class)->getAll(),
         ];

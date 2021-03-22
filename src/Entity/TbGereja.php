@@ -25,22 +25,7 @@ class TbGereja
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $jadwal_ibadah;
-
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
-    private $alamat;
-
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
     private $tentang;
-
-    /**
-     * @ORM\Column(type="string", length=15, nullable=true)
-     */
-    private $telepon;
 
     /**
      * @ORM\Column(type="string", length=50, nullable=true)
@@ -99,30 +84,6 @@ class TbGereja
         return $this;
     }
 
-    public function getJadwalIbadah(): ?string
-    {
-        return $this->jadwal_ibadah;
-    }
-
-    public function setJadwalIbadah(?string $jadwal_ibadah): self
-    {
-        $this->jadwal_ibadah = $jadwal_ibadah;
-
-        return $this;
-    }
-
-    public function getAlamat(): ?string
-    {
-        return $this->alamat;
-    }
-
-    public function setAlamat(?string $alamat): self
-    {
-        $this->alamat = $alamat;
-
-        return $this;
-    }
-
     public function getTentang(): ?string
     {
         return $this->tentang;
@@ -131,18 +92,6 @@ class TbGereja
     public function setTentang(?string $tentang): self
     {
         $this->tentang = $tentang;
-
-        return $this;
-    }
-
-    public function getTelepon(): ?string
-    {
-        return $this->telepon;
-    }
-
-    public function setTelepon(?string $telepon): self
-    {
-        $this->telepon = $telepon;
 
         return $this;
     }

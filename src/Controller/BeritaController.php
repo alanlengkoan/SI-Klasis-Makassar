@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\TbGereja;
 use App\Entity\TbInformasi;
+use App\Entity\User;
 use App\Service\MyfunctionHelper;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -27,6 +28,7 @@ class BeritaController extends AbstractController
     {
         $data = [
             'halaman' => 'Berita',
+            'klasis'  => $this->mng->getRepository(User::class)->getDetail('1'),
             'berita'  => $this->mng->getRepository(TbInformasi::class)->getAll(),
             'gereja'  => $this->mng->getRepository(TbGereja::class)->getAll(),
         ];

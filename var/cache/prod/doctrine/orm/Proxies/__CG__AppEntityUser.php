@@ -112,10 +112,10 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', 'id_users', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nama', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'foto', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\User' . "\0" . 'upd'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', 'id_users', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nama', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'foto', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'telepon', '' . "\0" . 'App\\Entity\\User' . "\0" . 'alamat', '' . "\0" . 'App\\Entity\\User' . "\0" . 'jadwal_ibadah_operasional', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\User' . "\0" . 'upd'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nama', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'foto', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\User' . "\0" . 'upd'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nama', '' . "\0" . 'App\\Entity\\User' . "\0" . 'email', '' . "\0" . 'App\\Entity\\User' . "\0" . 'foto', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'telepon', '' . "\0" . 'App\\Entity\\User' . "\0" . 'alamat', '' . "\0" . 'App\\Entity\\User' . "\0" . 'jadwal_ibadah_operasional', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\User' . "\0" . 'upd'];
     }
 
     /**
@@ -390,6 +390,72 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPassword', [$password]);
 
         return parent::setPassword($password);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getTelepon(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTelepon', []);
+
+        return parent::getTelepon();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setTelepon(?string $telepon): \App\Entity\User
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTelepon', [$telepon]);
+
+        return parent::setTelepon($telepon);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAlamat(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAlamat', []);
+
+        return parent::getAlamat();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setAlamat(?string $alamat): \App\Entity\User
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAlamat', [$alamat]);
+
+        return parent::setAlamat($alamat);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getJadwalIbadahOperasional(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getJadwalIbadahOperasional', []);
+
+        return parent::getJadwalIbadahOperasional();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setJadwalIbadahOperasional(?string $jadwal_ibadah_operasional): \App\Entity\User
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setJadwalIbadahOperasional', [$jadwal_ibadah_operasional]);
+
+        return parent::setJadwalIbadahOperasional($jadwal_ibadah_operasional);
     }
 
     /**

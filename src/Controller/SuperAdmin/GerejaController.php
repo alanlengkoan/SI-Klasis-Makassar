@@ -59,6 +59,8 @@ class GerejaController extends AbstractController
                     $user->setEmail($post->request->get('inpemail'));
                     $user->setUsername($post->request->get('inpusername'));
                     $user->setPassword($pass_enkrip->encodePassword($user, $post->request->get('inppassword')));
+                    $user->setAlamat($post->request->get('inpalamat'));
+                    $user->setTelepon($post->request->get('inptelepon'));
                     $user->setRoles(["ROLE_ADMIN"]);
                     $user->setIns(date_create());
                     $user->setUpd(date_create());
@@ -66,9 +68,7 @@ class GerejaController extends AbstractController
                     // insert ke tabel gereja
                     $gereja = new TbGereja();
                     $gereja->setIdGereja($id_gereja);
-                    $gereja->setAlamat($post->request->get('inpalamat'));
                     $gereja->setTentang($post->request->get('inptentang'));
-                    $gereja->setTelepon($post->request->get('inptelepon'));
                     $gereja->setTwitter($post->request->get('inptwitter'));
                     $gereja->setInstagram($post->request->get('inpinstagram'));
                     $gereja->setFacebook($post->request->get('inpfacebook'));

@@ -66,10 +66,10 @@ class TbGereja extends \App\Entity\TbGereja implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'id', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'id_gereja', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'jadwal_ibadah', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'alamat', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'tentang', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'telepon', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'twitter', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'instagram', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'facebook', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'youtube', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'lat', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'lon', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'upd'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'id', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'id_gereja', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'tentang', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'twitter', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'instagram', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'facebook', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'youtube', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'lat', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'lon', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'upd'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'id', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'id_gereja', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'jadwal_ibadah', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'alamat', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'tentang', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'telepon', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'twitter', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'instagram', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'facebook', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'youtube', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'lat', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'lon', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'upd'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'id', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'id_gereja', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'tentang', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'twitter', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'instagram', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'facebook', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'youtube', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'lat', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'lon', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'ins', '' . "\0" . 'App\\Entity\\TbGereja' . "\0" . 'upd'];
     }
 
     /**
@@ -216,50 +216,6 @@ class TbGereja extends \App\Entity\TbGereja implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getJadwalIbadah(): ?string
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getJadwalIbadah', []);
-
-        return parent::getJadwalIbadah();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setJadwalIbadah(?string $jadwal_ibadah): \App\Entity\TbGereja
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setJadwalIbadah', [$jadwal_ibadah]);
-
-        return parent::setJadwalIbadah($jadwal_ibadah);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getAlamat(): ?string
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAlamat', []);
-
-        return parent::getAlamat();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setAlamat(?string $alamat): \App\Entity\TbGereja
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAlamat', [$alamat]);
-
-        return parent::setAlamat($alamat);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getTentang(): ?string
     {
 
@@ -277,28 +233,6 @@ class TbGereja extends \App\Entity\TbGereja implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTentang', [$tentang]);
 
         return parent::setTentang($tentang);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getTelepon(): ?string
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getTelepon', []);
-
-        return parent::getTelepon();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setTelepon(?string $telepon): \App\Entity\TbGereja
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setTelepon', [$telepon]);
-
-        return parent::setTelepon($telepon);
     }
 
     /**

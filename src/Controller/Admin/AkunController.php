@@ -150,12 +150,12 @@ class AkunController extends AbstractController
                     $user->setEmail($post->request->get('inpemail'));
                     $user->setUsername($post->request->get('inpusername'));
                     $user->setUpd(date_create());
+                    $user->setJadwalIbadahOperasional($post->request->get('inpjadwalibadah'));
+                    $user->setAlamat($post->request->get('inpalamat'));
+                    $user->setTelepon($post->request->get('inptelepon'));
 
                     // untuk tabel gereja
-                    $gereja->setJadwalIbadah($post->request->get('inpjadwalibadah'));
-                    $gereja->setAlamat($post->request->get('inpalamat'));
                     $gereja->setTentang($post->request->get('inptentang'));
-                    $gereja->setTelepon($post->request->get('inptelepon'));
                     $gereja->setTwitter($post->request->get('inptwitter'));
                     $gereja->setInstagram($post->request->get('inpinstagram'));
                     $gereja->setFacebook($post->request->get('inpfacebook'));
