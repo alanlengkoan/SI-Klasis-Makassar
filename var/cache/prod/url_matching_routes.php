@@ -76,6 +76,7 @@ return [
         '/superadmin/gereja' => [[['_route' => 'superadmin_gereja', '_controller' => 'App\\Controller\\SuperAdmin\\GerejaController::index'], null, null, null, false, false, null]],
         '/superadmin/gereja/add' => [[['_route' => 'superadmin_gereja_add', '_controller' => 'App\\Controller\\SuperAdmin\\GerejaController::add'], null, null, null, false, false, null]],
         '/superadmin/gereja/del' => [[['_route' => 'superadmin_gereja_del', '_controller' => 'App\\Controller\\SuperAdmin\\GerejaController::del'], null, null, null, false, false, null]],
+        '/superadmin/gereja/res_pass' => [[['_route' => 'superadmin_gereja_res_pass', '_controller' => 'App\\Controller\\SuperAdmin\\GerejaController::reset_password'], null, null, null, false, false, null]],
         '/superadmin/jadwal' => [[['_route' => 'superadmin_jadwal', '_controller' => 'App\\Controller\\SuperAdmin\\JadwalController::index'], null, null, null, false, false, null]],
         '/superadmin/jadwal/add' => [[['_route' => 'superadmin_jadwal_add', '_controller' => 'App\\Controller\\SuperAdmin\\JadwalController::add'], null, null, null, false, false, null]],
         '/superadmin/jadwal/get' => [[['_route' => 'superadmin_jadwal_get', '_controller' => 'App\\Controller\\SuperAdmin\\JadwalController::get_data'], null, null, null, false, false, null]],

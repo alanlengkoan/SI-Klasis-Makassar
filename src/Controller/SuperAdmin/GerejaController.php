@@ -122,4 +122,27 @@ class GerejaController extends AbstractController
 
         return new JsonResponse($response);
     }
+
+    /**
+     * @Route("/superadmin/gereja/res_pass", name="superadmin_gereja_res_pass")
+     */
+    // untuk hapus data
+    public function reset_password(Request $post, UserPasswordEncoderInterface $pass_enkrip)
+    {
+        try {
+            $id   = $post->request->get('id');
+            $user = $this->mng->getRepository(User::class)->findOneBy(['id_users' => $id]);
+
+            $user->setPassword($pass_enkrip->encodePassword($user, '12345678'));
+
+            $this->mng->persist($user);
+            $this->mng->flush();
+
+            $response = ['title' => 'Berhasil!', 'text' => 'Berhasil dihapus!', 'type' => 'success', 'button' => 'Ok!'];
+        } catch (Exception $e) {
+            $response = ['title' => 'Gagal!', 'text' => 'Gagal dihapus!', 'type' => 'error', 'button' => 'Ok!'];
+        }
+
+        return new JsonResponse($response);
+    }
 }
