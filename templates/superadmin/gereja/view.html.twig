@@ -125,6 +125,9 @@
                                         <button class="btn btn-outline-danger btn-sm btn-rounded" id="del" data-id="{{ rows.id_gereja }}">
                                             <i class="fas fa-trash"></i>&nbsp;Hapus
                                         </button>
+                                        <button class="btn btn-outline-warning btn-sm btn-rounded" id="res-pass" data-id="{{ rows.id_gereja }}">
+                                            <i class="fas fa-refresh"></i>&nbsp;Reset Password
+                                        </button>
                                     </td>
                                     <td>{{ rows.nama }}</td>
                                     <td>{{ (rows.email == null) ? 'Belum ada email.' : rows.email }}</td>
@@ -203,6 +206,50 @@
         });
     }();
 
+    // untuk reset password data
+    var untukResetPassData = function() {
+        $(document).on('click', '#res-pass', function() {
+            var ini = $(this);
+
+            swal({
+                title: "Apakah Anda yakin ingin mereset password?",
+                text: "Akun yang telah direset tidak dapat dikembalikan!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((del) => {
+                if (del) {
+                    $.ajax({
+                        type: "post",
+                        url: "gereja/res_pass",
+                        dataType: 'json',
+                        data: {
+                            id: ini.data('id')
+                        },
+                        beforeSend: function () {
+                            ini.attr('disabled', 'disabled');
+                            ini.html('<i class="fas fa-spinner"></i>&nbsp;Menunggu');
+                        },
+                        success: function (response) {
+                            swal({
+                                title: response.title,
+                                text: response.text,
+                                icon: response.type,
+                                button: response.button,
+                            })
+                            .then((value) => {
+                                location.reload();
+                            });
+                        }
+                    });
+                } else {
+                    return false;
+                }
+            });
+        });
+    }();
+        
     // untuk hapus data
     var untukHapusData = function() {
         $(document).on('click', '#del', function() {
