@@ -1,0 +1,67 @@
+<?php //%255B08d9ea4f38d1b1aaa71e4a3914137e25%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT t0_.id_gereja AS id_gereja_0, t0_.tentang AS tentang_1, t0_.twitter AS twitter_2, t0_.instagram AS instagram_3, t0_.facebook AS facebook_4, t0_.youtube AS youtube_5, t0_.lat AS lat_6, t0_.lon AS lon_7, u1_.nama AS nama_8, u1_.alamat AS alamat_9, u1_.telepon AS telepon_10, u1_.jadwal_ibadah_operasional AS jadwal_ibadah_operasional_11, u1_.email AS email_12, u1_.foto AS foto_13, u1_.username AS username_14 FROM tb_gereja t0_ LEFT JOIN user u1_ ON (t0_.id_gereja = u1_.id_users) WHERE u1_.id_users = \'885667011\'',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'id_gereja_0' => 'id_gereja',
+                    'tentang_1' => 'tentang',
+                    'twitter_2' => 'twitter',
+                    'instagram_3' => 'instagram',
+                    'facebook_4' => 'facebook',
+                    'youtube_5' => 'youtube',
+                    'lat_6' => 'lat',
+                    'lon_7' => 'lon',
+                    'nama_8' => 'nama',
+                    'alamat_9' => 'alamat',
+                    'telepon_10' => 'telepon',
+                    'jadwal_ibadah_operasional_11' => 'jadwal_ibadah',
+                    'email_12' => 'email',
+                    'foto_13' => 'foto',
+                    'username_14' => 'username',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'id_gereja_0' => 'integer',
+                    'tentang_1' => 'text',
+                    'twitter_2' => 'string',
+                    'instagram_3' => 'string',
+                    'facebook_4' => 'string',
+                    'youtube_5' => 'string',
+                    'lat_6' => 'float',
+                    'lon_7' => 'float',
+                    'nama_8' => 'string',
+                    'alamat_9' => 'text',
+                    'telepon_10' => 'string',
+                    'jadwal_ibadah_operasional_11' => 'text',
+                    'email_12' => 'string',
+                    'foto_13' => 'string',
+                    'username_14' => 'string',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];
