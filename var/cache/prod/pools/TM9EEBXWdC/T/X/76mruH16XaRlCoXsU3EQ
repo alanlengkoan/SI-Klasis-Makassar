@@ -1,0 +1,49 @@
+<?php //%255Ba47359222b0b3b519659a7616f313aaf%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT t0_.id_jadwal_rincian AS id_jadwal_rincian_0, t1_.nama AS nama_1, t0_.nama_keluarga AS nama_keluarga_2, t0_.nama_pelayan AS nama_pelayan_3, t0_.alamat AS alamat_4, t0_.tanggal_ibadah AS tanggal_ibadah_5 FROM tb_jadwal_rincian t0_ LEFT JOIN tb_jadwal t1_ ON (t0_.id_jadwal = t1_.id_jadwal) WHERE t0_.id_gereja = \'42866227\' AND t0_.id_jadwal = \'51777981\' AND (DATE(t0_.tanggal_ibadah) BETWEEN \'2021-05-23\' AND \'2021-05-30\')',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'id_jadwal_rincian_0' => 'id_jadwal_rincian',
+                    'nama_1' => 'nama',
+                    'nama_keluarga_2' => 'nama_keluarga',
+                    'nama_pelayan_3' => 'nama_pelayan',
+                    'alamat_4' => 'alamat',
+                    'tanggal_ibadah_5' => 'tanggal_ibadah',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'id_jadwal_rincian_0' => 'integer',
+                    'nama_1' => 'string',
+                    'nama_keluarga_2' => 'string',
+                    'nama_pelayan_3' => 'string',
+                    'alamat_4' => 'text',
+                    'tanggal_ibadah_5' => 'datetime',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

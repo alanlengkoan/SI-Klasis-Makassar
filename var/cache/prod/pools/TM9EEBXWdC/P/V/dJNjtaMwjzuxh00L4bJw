@@ -1,0 +1,49 @@
+<?php //%255B096ddda4c7050d13de38b7a81db9c1b0%255D%255B1%255D
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT t0_.id_keuangan_rincian AS id_keuangan_rincian_0, t0_.debit AS debit_1, t0_.keterangan AS keterangan_2, t0_.gambar AS gambar_3, t0_.tanggal AS tanggal_4, t1_.nama AS nama_5 FROM tb_keuangan_rincian t0_ LEFT JOIN tb_keuangan t1_ ON (t0_.id_keuangan = t1_.id_keuangan) WHERE t0_.id_gereja = \'42866227\' AND t0_.status_u = \'d\' AND (t0_.tanggal BETWEEN \'2021-03-28\' AND \'2021-04-04\')',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'id_keuangan_rincian_0' => 'id_keuangan_rincian',
+                    'debit_1' => 'debit',
+                    'keterangan_2' => 'keterangan',
+                    'gambar_3' => 'gambar',
+                    'tanggal_4' => 'tanggal',
+                    'nama_5' => 'nama_keuangan',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'id_keuangan_rincian_0' => 'integer',
+                    'debit_1' => 'integer',
+                    'keterangan_2' => 'text',
+                    'gambar_3' => 'string',
+                    'tanggal_4' => 'date',
+                    'nama_5' => 'string',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];
