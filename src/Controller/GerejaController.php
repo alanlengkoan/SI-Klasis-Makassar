@@ -67,25 +67,28 @@ class GerejaController extends AbstractController
      */
     public function warta(int $id)
     {
-        $tanggal_awal  = date('Y-m-d', strtotime('-7 days'));
-        $tanggal_akhir = date('Y-m-d');
+        $tanggal_awal_sesudah  = date('Y-m-d');
+        $tanggal_akhir_sesudah = date('Y-m-d', strtotime('+7 days'));
+
+        $tanggal_awal_sebelum  = date('Y-m-d',strtotime('-7 days'));
+        $tanggal_akhir_sebelum = date('Y-m-d');
 
         $jenis_ibadah = $this->mng->getRepository(TbJadwal::class)->getAll();
         $jadwal_ibadah_harian = [];
         foreach ($jenis_ibadah as $key => $value) {
-            $jadwal_ibadah = $this->mng->getRepository(TbJadwalRincian::class)->getDetailDate($id, $value['id_jadwal'], $tanggal_awal, $tanggal_akhir);
+            $jadwal_ibadah = $this->mng->getRepository(TbJadwalRincian::class)->getDetailDate($id, $value['id_jadwal'], $tanggal_awal_sesudah, $tanggal_akhir_sesudah);
 
             $jadwal_ibadah_harian[$value['nama']] = $jadwal_ibadah;
         }
 
         $data = [
-            'tanggal'              => $tanggal_akhir,
+            'tanggal'              => $tanggal_akhir_sesudah,
             'detail'               => $this->mng->getRepository(TbGereja::class)->getDetail($id),
             'jadwal_ibadah_harian' => $jadwal_ibadah_harian,
-            'jadwal_ibadah_minggu' => $this->mng->getRepository(TbJadwalMinggu::class)->getDetailDate($id, $tanggal_akhir),
-            'ulang_tahun'          => $this->mng->getRepository(TbJemaat::class)->getDetailDate($id, $tanggal_awal, $tanggal_akhir),
-            'keuangan_pemasukan'   => $this->mng->getRepository(TbKeuanganRincian::class)->getDetailPemasukan($id, $tanggal_awal, $tanggal_akhir),
-            'keuangan_pengeluaran' => $this->mng->getRepository(TbKeuanganRincian::class)->getDetailPengeluaran($id, $tanggal_awal, $tanggal_akhir),
+            'jadwal_ibadah_minggu' => $this->mng->getRepository(TbJadwalMinggu::class)->getDetailDate($id, $tanggal_awal_sesudah, $tanggal_akhir_sesudah),
+            'ulang_tahun'          => $this->mng->getRepository(TbJemaat::class)->getDetailDate($id, $tanggal_awal_sesudah, $tanggal_akhir_sesudah),
+            'keuangan_pemasukan'   => $this->mng->getRepository(TbKeuanganRincian::class)->getDetailPemasukan($id, $tanggal_awal_sebelum, $tanggal_akhir_sebelum),
+            'keuangan_pengeluaran' => $this->mng->getRepository(TbKeuanganRincian::class)->getDetailPengeluaran($id, $tanggal_awal_sebelum, $tanggal_akhir_sebelum),
         ];
 
         // untuk membuat pdf
