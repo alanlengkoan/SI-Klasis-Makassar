@@ -16,6 +16,6 @@ if (!\class_exists(App_KernelProdContainer::class, false)) {
 
 return new \ContainerREX4rqs\App_KernelProdContainer([
     'container.build_hash' => 'REX4rqs',
-    'container.build_id' => 'ed4b314f',
-    'container.build_time' => 1622949988,
+    'container.build_id' => '77a36b31',
+    'container.build_time' => 1622950525,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerREX4rqs');
