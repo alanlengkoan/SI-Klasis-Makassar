@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'e7f24e2697f8be276dbfdb4a7f209e2877675788',
+    'reference' => 'b2c6ab165da55d8b48045716d655eaa27d629604',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'e7f24e2697f8be276dbfdb4a7f209e2877675788',
+      'reference' => 'b2c6ab165da55d8b48045716d655eaa27d629604',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -172,6 +172,15 @@
       array (
       ),
       'reference' => '8768448244967a46d6e67b891d30878e0e15d25c',
+    ),
+    'nikic/php-parser' => 
+    array (
+      'pretty_version' => 'v4.10.3',
+      'version' => '4.10.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'dbe56d23de8fcb157bbc0cfb3ad7c7de0cfb0984',
     ),
     'ocramius/package-versions' => 
     array (
@@ -523,6 +532,15 @@
       array (
       ),
       'reference' => 'eaac169bf64d307d48daef7e349729d670df6659',
+    ),
+    'symfony/maker-bundle' => 
+    array (
+      'pretty_version' => 'v1.31.1',
+      'version' => '1.31.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4f57a44cef0b4555043160b8bf223fcde8a7a59a',
     ),
     'symfony/mime' => 
     array (

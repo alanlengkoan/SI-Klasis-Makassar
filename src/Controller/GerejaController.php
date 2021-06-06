@@ -53,10 +53,11 @@ class GerejaController extends AbstractController
             'klasis'        => $this->mng->getRepository(User::class)->getDetail('1'),
             'gereja'        => $this->mng->getRepository(TbGereja::class)->getAll(),
             'detail'        => $this->mng->getRepository(TbGereja::class)->getDetail($id),
-            'jadwal_minggu' => $this->mng->getRepository(TbJadwalMinggu::class)->getDetail($id),
-            'jadwal'        => $this->mng->getRepository(TbJadwalRincian::class)->getDetail($id),
+            'jadwal_minggu' => $this->mng->getRepository(TbJadwalMinggu::class)->getDetailJadwal($id),
+            'jadwal'        => $this->mng->getRepository(TbJadwalRincian::class)->getDetailJadwal($id),
             'pengurus'      => $this->mng->getRepository(TbPengurus::class)->getDetail($id),
-            'galeri'        => $this->mng->getRepository(TbInformasi::class)->getGaleri()
+            'galeri'        => $this->mng->getRepository(TbInformasi::class)->getGaleri(),
+            'jumlah_jemaat' => $this->getDoctrine()->getRepository(TbJemaat::class)->count(['id_gereja' => $id])
         ];
 
         return $this->render('gereja_det.html.twig', $data);

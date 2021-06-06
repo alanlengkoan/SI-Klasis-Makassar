@@ -85,6 +85,7 @@ class SecurityController extends AbstractController
                     $jemaat->setPekerjaan($post->request->get('inppekerjaan'));
                     $jemaat->setNoTelpon($post->request->get('inpno_telpon'));
                     $jemaat->setAlamat($post->request->get('inpalamat'));
+                    $jemaat->setStatus('0');
                     $jemaat->setIns(date_create());
                     $jemaat->setUpd(date_create());
 
@@ -102,6 +103,24 @@ class SecurityController extends AbstractController
             $response = ['title' => 'Gagal!', 'text' => 'Tidak ada request!', 'type' => 'error', 'button' => 'Ok!'];
         }
 
+        return new JsonResponse($response);
+    }
+
+    /**
+     * @Route("register/check_nik", name="check_nik")
+     */
+    // untuk check nik jemaat
+    public function check_nik(Request $post)
+    {
+        $nik = $post->request->get('nik');
+        $get = $this->mng->getRepository(TbJemaat::class)->checkNik($nik);
+        $sum = count($get);
+
+        if ($sum > 0) {
+            $response = ['status' => false, 'text' => 'Nomor NIK yang Anda masukkan sudah terdaftar!'];
+        } else {
+            $response = ['status' => true, 'text' => 'Nomor NIK yang Anda masukkan belum terdaftar!'];
+        }
         return new JsonResponse($response);
     }
 

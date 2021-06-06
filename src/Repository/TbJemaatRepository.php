@@ -30,4 +30,12 @@ class TbJemaatRepository extends ServiceEntityRepository
         $qry = $this->mng->createQuery($sql)->getResult();
         return $qry;
     }
+
+    // untuk mengecek nik apa bila sudah terdaftar
+    public function checkNik($nik)
+    {
+        $sql = "SELECT j.id_jemaat, j.nik, j.nama, j.tmp_lahir, j.tgl_lahir, j.jen_kel, j.alamat, j.pekerjaan, j.no_telpon FROM App\Entity\TbJemaat j WHERE j.nik LIKE '%$nik%' ";
+        $qry = $this->mng->createQuery($sql)->getResult();
+        return $qry;
+    }
 }

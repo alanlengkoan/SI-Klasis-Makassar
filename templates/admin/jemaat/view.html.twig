@@ -45,9 +45,15 @@
                                 <tr>
                                     <td>{{ loop.index }}</td>
                                     <td>
-                                        <button class="btn btn-outline-danger btn-sm btn-rounded" id="upd" data-id="{{ rows.idJemaat }}" data-toggle="modal" data-target="#modal-ubah">
-                                            <i class="fas fa-edit"></i>&nbsp;Ubah
-                                        </button>
+                                        {% if rows.status == 0 %}
+                                            <button class="btn btn-outline-warning btn-sm btn-rounded" id="acc" data-id="{{ rows.idJemaat }}">
+                                                <i class="fas fa-check"></i>&nbsp;Verifikasi
+                                            </button>
+                                        {% else %}
+                                            <button class="btn btn-outline-danger btn-sm btn-rounded" id="upd" data-id="{{ rows.idJemaat }}" data-toggle="modal" data-target="#modal-ubah">
+                                                <i class="fas fa-edit"></i>&nbsp;Ubah
+                                            </button>
+                                        {% endif %}
                                         <button class="btn btn-outline-primary btn-sm btn-rounded" id="del" data-id="{{ rows.idJemaat }}">
                                             <i class="fas fa-trash"></i>&nbsp;Hapus
                                         </button>
@@ -166,6 +172,50 @@
                     }
                 })
             }
+        });
+    }();
+
+    // untuk verifikasi data jemaat
+    var untukHapusData = function() {
+        $(document).on('click', '#acc', function() {
+            var ini = $(this);
+
+            swal({
+                title: "Apakah Anda yakin ingin jemaat terdaftar dalam database Anda?",
+                text: "Data yang telah diproses tidak dapat dikembalikan!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((del) => {
+                if (del) {
+                    $.ajax({
+                        type: "post",
+                        url: "{{ path('admin_jemaat_acc') }}",
+                        dataType: 'json',
+                        data: {
+                            id: ini.data('id')
+                        },
+                        beforeSend: function() {
+                            ini.attr('disabled', 'disabled');
+                            ini.html('<i class="fas fa-spinner"></i>&nbsp;Menunggu');
+                        },
+                        success: function(response) {
+                            swal({
+                                title: response.title,
+                                text: response.text,
+                                icon: response.type,
+                                button: response.button,
+                            })
+                            .then((value) => {
+                                location.reload();
+                            });
+                        }
+                    });
+                } else {
+                    return false;
+                }
+            });
         });
     }();
 

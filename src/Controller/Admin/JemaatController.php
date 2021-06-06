@@ -65,6 +65,29 @@ class JemaatController extends AbstractController
     }
 
     /**
+     * @Route("/admin/jemaat/acc", name="admin_jemaat_acc")
+     */
+    // untuk hapus jemaat
+    public function acc(Request $post)
+    {
+        try {
+            $id = $post->request->get('id');
+
+            $jemaat = $this->mng->getRepository(TbJemaat::class)->findOneBy(['id_jemaat' => $id]);
+            $jemaat->setStatus('1');
+
+            $this->mng->persist($jemaat);
+            $this->mng->flush();
+
+            $response = ['title' => 'Berhasil!', 'text' => 'Berhasil dihapus!', 'type' => 'success', 'button' => 'Ok!'];
+        } catch (Exception $e) {
+            $response = ['title' => 'Gagal!', 'text' => 'Gagal dihapus!', 'type' => 'error', 'button' => 'Ok!'];
+        }
+
+        return new JsonResponse($response);
+    }
+
+    /**
      * @Route("/admin/jemaat/upd", name="admin_jemaat_upd")
      */
     // untuk ubah data
@@ -116,9 +139,9 @@ class JemaatController extends AbstractController
         try {
             $id = $post->request->get('id');
 
-            $keuangan = $this->mng->getRepository(TbJemaat::class)->findOneBy(['id_jemaat' => $id]);
+            $jemaat = $this->mng->getRepository(TbJemaat::class)->findOneBy(['id_jemaat' => $id]);
 
-            $this->mng->remove($keuangan);
+            $this->mng->remove($jemaat);
             $this->mng->flush();
 
             $response = ['title' => 'Berhasil!', 'text' => 'Berhasil dihapus!', 'type' => 'success', 'button' => 'Ok!'];
