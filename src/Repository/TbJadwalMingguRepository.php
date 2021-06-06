@@ -31,6 +31,14 @@ class TbJadwalMingguRepository extends ServiceEntityRepository
         return $qry;
     }
 
+    // untuk mengambil semua data
+    public function getDetailJadwal($id)
+    {
+        $sql = "SELECT jr.id_jadwal_minggu, jr.id_gereja, jr.nama_pelayan, jr.tanggal_ibadah FROM App\Entity\TbJadwalMinggu jr WHERE jr.id_gereja = '$id' ORDER BY jr.tanggal_ibadah DESC";
+        $qry = $this->mng->createQuery($sql)->setMaxResults(3)->getResult();
+        return $qry;
+    }
+
     // untuk mengambil jadwal ibadah minggu
     public function getDetailDate($id, $tgl_ibadah_awal, $tgl_ibadah_akhir)
     {

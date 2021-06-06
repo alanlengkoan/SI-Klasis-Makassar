@@ -68,6 +68,11 @@ class TbJemaat
     private $no_telpon;
 
     /**
+     * @ORM\Column(type="string", columnDefinition="ENUM('0', '1')")
+     */
+    private $status;
+
+    /**
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $ins;
@@ -198,6 +203,18 @@ class TbJemaat
     public function setNoTelpon(?string $no_telpon): self
     {
         $this->no_telpon = $no_telpon;
+
+        return $this;
+    }
+
+    public function getStatus(): ?string
+    {
+        return $this->status;
+    }
+
+    public function setStatus(?string $status): self
+    {
+        $this->status = $status;
 
         return $this;
     }
